@@ -1,10 +1,15 @@
-
+"use strict"
 // Exercise 6
 const validate = () => {
 	let error = 0;
 	// Get the input fields
 	const fName = document.getElementById("fName");
 	const fEmail = document.getElementById("fEmail");
+	const fAddress = document.getElementById("fAdress");
+	const fLastN = document.getElementById("fLastN")
+	const fPassword = document.getElementById("fPassword")
+	const fPhone = document.getElementById("fPhone")
+
 
 	// Get the error elements
 	const errorName = document.getElementById("errorName");
