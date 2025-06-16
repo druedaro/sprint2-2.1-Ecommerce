@@ -12,7 +12,6 @@ Este repositorio contiene contiene el código fuente de una web App de comercio 
 * ✔️ Clona el repositorio en local
 ```
 git clone https://github.com/druedaro/sprint1-Maquetacio.git
-
 ```
 * ✔️ Ingresa al directorio del proyecto:
 ```
