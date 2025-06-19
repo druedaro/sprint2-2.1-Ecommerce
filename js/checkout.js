@@ -1,33 +1,38 @@
-"use strict"
-// Exercise 6
-const validate = () => {
-	let error = 0;
-	// Get the input fields
-	const fName = document.getElementById("fName");
-	const fEmail = document.getElementById("fEmail");
-	const fAddress = document.getElementById("fAdress");
-	const fLastN = document.getElementById("fLastN")
-	const fPassword = document.getElementById("fPassword")
-	const fPhone = document.getElementById("fPhone")
 
-
-	// Get the error elements
-	const errorName = document.getElementById("errorName");
-	const errorEmail = document.getElementById("errorEmail");  
-	
-	// Validate fields entered by the user: name, phone, password, and email
-	if(fName.value.trim() == ""){
-		error++;
-	}
-
-	if(fEmail.value == ""){
-		error++;
-	}
-	 
-	if(error>0){
-		alert("Please fill in all required fields.");
-	}else{
-		alert("Form submitted successfully");
-	}
-
-}
+			document.getElementById('checkout-Form').addEventListener('submit', function(e) {
+				e.preventDefault();
+				
+				const form = e.target;
+				const inputs = form.querySelectorAll('input[required]');
+				let isValid = true;
+				
+				// Reset previous validation states
+				inputs.forEach(input => {
+					input.classList.remove('is-invalid', 'is-valid');
+				});
+				
+				// Validate each required field
+				inputs.forEach(input => {
+					if (!input.checkValidity()) {
+						input.classList.add('is-invalid');
+						isValid = false;
+					} else {
+						input.classList.add('is-valid');
+					}
+				});
+				
+				// If all fields are valid, show success modal
+				if (isValid) {
+					const successModal = new bootstrap.Modal(document.getElementById('successModal'));
+					successModal.show();
+					
+					// Optional: Reset form after showing modal
+					setTimeout(() => {
+						form.reset();
+						inputs.forEach(input => {
+							input.classList.remove('is-valid');
+						});
+					}, 2000);
+				}
+			});
+		
