@@ -2,20 +2,12 @@
 
 import { products } from './products.js';
 
-// => Reminder, it's extremely important that you debug your code. 
-// ** It will save you a lot of time and frustration!
-// ** You'll understand the code better than with console.log(), and you'll also find errors faster. 
-// ** Don't hesitate to seek help from your peers or your mentor if you still struggle with debugging.
-
-// Improved version of cartList. Cart is an array of products (objects), but each one has a quantity field to define its quantity, so these products are not repeated.
 const cart = [];
 const total = 0;
 let productCount = 0;
 
 // Exercise 1
 const buy = (id) => {
-    // 1. Loop for to the array products to get the item to add to cart
-    // 2. Add found product to the cart array
     let index = cart.findIndex(product => product.id === id)
 
     if (index === -1) {
@@ -42,7 +34,6 @@ const cleanCart = () => {
 
 // Exercise 3
 const calculateTotal = () => {
-    // Calculate total price of the cart using the "cartList" array
     let totalAmount = 0
 
     if (cart.length == 0) {
@@ -68,7 +59,6 @@ const calculateTotalByProduct = (product) => {
 
 // Exercise 4
 const applyPromotionsCart = () => {
-    // Apply promotions to each item in the array "cart"
     for (let i = 0; i < cart.length; i++) {
         let product = cart[i]
 
@@ -87,7 +77,6 @@ const applyPromotionsCart = () => {
 
 // Exercise 5
 const printCart = () => {
-    // Fill the shopping cart modal manipulating the shopping cart dom
     const cartList = document.getElementById('cart_list')
     if (!cartList) return;
     cartList.innerHTML = ''
@@ -125,7 +114,6 @@ const printCart = () => {
             <td>${calculateTotalByProduct(product).toFixed(2)}</td>
         `
         
-        // Add event listeners to the buttons
         const removeBtn = row.querySelector('.remove-btn');
         const addBtn = row.querySelector('.add-btn');
         
@@ -175,7 +163,6 @@ const open_modal = () => {
     printCart();
 }
 
-// Utility functions
 const updateCartUI = () => {
     const countProductElement = document.getElementById('count_product');
     if (countProductElement) {
@@ -183,7 +170,6 @@ const updateCartUI = () => {
     }
 }
 
-// Event Listeners and DOM Initialization
 document.querySelectorAll('.add-to-cart').forEach(button => {
     button.addEventListener('click', function() {
         const productId = parseInt(this.getAttribute('data-product-id'));
@@ -206,23 +192,5 @@ const cartModal = document.getElementById('cartModal');
 if (cartModal) {
     cartModal.addEventListener('show.bs.modal', function() {
         printCart();
-    });
-    
-    // Fix accessibility issue: remove focus from modal elements when closing
-    cartModal.addEventListener('hide.bs.modal', function() {
-        // Remove focus from any focused element within the modal
-        const focusedElement = cartModal.querySelector(':focus');
-        if (focusedElement) {
-            focusedElement.blur();
-        }
-    });
-    
-    // Additional fix: ensure proper focus management when modal is shown
-    cartModal.addEventListener('shown.bs.modal', function() {
-        // Optionally focus on the first interactive element or modal itself
-        const closeButton = cartModal.querySelector('.btn-close');
-        if (closeButton) {
-            closeButton.focus();
-        }
     });
 }
