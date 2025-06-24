@@ -12,7 +12,7 @@ Este repositorio contiene contiene el código fuente de una web App de comercio 
 ## **🛠️ Instalación**
 * ✔️ Clona el repositorio en local
 ```
-git clone hgit clone https://github.com/druedaro/sprint2-2.1-Ecommerce.git
+git clone git clone https://github.com/druedaro/sprint2-2.1-Ecommerce.git
 ```
 * ✔️ Ingresa al directorio del proyecto:
 ```
