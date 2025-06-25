@@ -4,7 +4,7 @@ body {
 
 .hero {
   background-color: #1e153c !important;
-  background-image: url(../images/header-2.png);
+  background-image: url(../assets/images/header-2.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -22,24 +22,14 @@ body {
 }
 
 .nav-link {
-  color: #1e153c;
-  transition: all 0.3s ease;
+  color: #1e153c !important;
+  transition: all 0.3s ease !important;
 }
 
 .nav-link:hover,
 .nav-link:focus {
-  color: #e24055;
-  text-decoration: underline;
-}
-
-.cart-button {
-  border-color: #e24055;
-  color: #e24055;
-}
-
-.cart-button:hover {
-  background-color: #e24055;
-  color: white;
+  color: #e24055 !important;
+  text-decoration: underline !important;
 }
 
 .product-card {
@@ -57,21 +47,26 @@ body {
   font-weight: bold;
 }
 
-.add-to-cart {
+.add-to-cart, .cart-button {
   border-color: #1e153c;
   color: #1e153c;
   transition: all 0.3s ease;
 }
 
-.add-to-cart:hover {
+.add-to-cart:hover, .cart-button:hover {
   background-color: #e24055;
-  color: white;
   border-color: #e24055;
 }
 
 .modal-header {
   background-color: #e24055;
   color: white;
+}
+
+.checkout-button, .checkout-button:hover, .checkout-button:active {
+  background-color: #e24055 !important;
+  border-color: #e24055 !important;
+  color: white !important;
 }
 
 footer.bg-dark {

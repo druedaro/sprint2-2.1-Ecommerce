@@ -1,21 +1,20 @@
 # S1.2. E-commerce
-## **📄 Descripción**
-Este repositorio contiene contiene el código fuente de una web App de comercio electrónico. Está desarrollada con Javascript, HTML y Bootstrap. Esta aplicación permite el uso del carrito: añadir o eliminar productos, aplicación de promociones y recuentos del total. También ofrece la validación de formulario de checkout del usuario.
+## **📄 Description**
+This repository contains the source code of an e-commerce web app. It is developed using JavaScript, HTML, and Bootstrap. This application allows shopping cart functionality: adding or removing products, applying promotions, and calculating the total amount. It also includes checkout form validation for the user.
 
-## **💻 Tecnologías Utilizadas**
-* HTML5
-* CSS
-* Bootstrap
-* JavaScript
+## **💻 Technologies Used**
+* HTML5  
+* CSS  
+* Bootstrap  
+* JavaScript  
 
-
-## **🛠️ Instalación**
-* ✔️ Clona el repositorio en local
+## **🛠️ Installation**
+* ✔️ Clone the repository locally:
 ```
 git clone git clone https://github.com/druedaro/sprint2-2.1-Ecommerce.git
 ```
-* ✔️ Ingresa al directorio del proyecto:
+* ✔️ Navigate to the project directory:
 ```
-$ cd tu-directorio
+$ cd your-directory
 ```
-* ✔️ Ejecuta el archivo index.html
+* ✔️ Open the `index.html` file in your browser

@@ -6,7 +6,6 @@ const cart = [];
 const total = 0;
 let productCount = 0;
 
-// Exercise 1
 const buy = (id) => {
     let index = cart.findIndex(product => product.id === id)
 
@@ -23,7 +22,6 @@ const buy = (id) => {
     }
 }
 
-// Exercise 2
 const cleanCart = () => {
     cart.forEach(product => delete product.subtotalWithDiscount)
     cart.length = 0;
@@ -32,7 +30,6 @@ const cleanCart = () => {
     printCart();
 }
 
-// Exercise 3
 const calculateTotal = () => {
     let totalAmount = 0
 
@@ -57,7 +54,6 @@ const calculateTotalByProduct = (product) => {
     return totalProduct;
 }
 
-// Exercise 4
 const applyPromotionsCart = () => {
     for (let i = 0; i < cart.length; i++) {
         let product = cart[i]
@@ -75,7 +71,6 @@ const applyPromotionsCart = () => {
     }
 }
 
-// Exercise 5
 const printCart = () => {
     const cartList = document.getElementById('cart_list')
     if (!cartList) return;
@@ -124,9 +119,6 @@ const printCart = () => {
     })
 }
 
-// ** Nivell II **
-
-// Exercise 7
 const removeFromCart = (id) => {
     let index = cart.findIndex(product => product.id === id)
 
