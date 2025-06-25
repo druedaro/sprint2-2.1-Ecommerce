@@ -2,6 +2,10 @@ body {
   background-color: #fffdff;
 }
 
+.primary-header {
+  z-index: 99;
+}
+
 .hero {
   background-color: #1e153c !important;
   background-image: url(../assets/images/header-2.png);
