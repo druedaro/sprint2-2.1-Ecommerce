@@ -6,6 +6,10 @@ body {
   z-index: 99;
 }
 
+main {
+  padding-top: 4rem;
+}
+
 .hero {
   background-color: #1e153c !important;
   background-image: url(../assets/images/header-2.png);

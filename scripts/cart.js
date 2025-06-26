@@ -41,3 +41,27 @@ export const cleanCart = () => {
     cart.length = 0;
     productCount = 0;
 }
+
+export const applyPromotionsCart = () => {
+    cart.forEach(product => {
+        if (product.offer && product.quantity >= product.offer.number) {
+            product.subtotalWithDiscount = product.price * ((100 - product.offer.percent) / 100);
+        } else {
+            delete product.subtotalWithDiscount
+        }
+    })
+}
+
+export const calculateTotalByProduct = (product) => {
+    const price = product.subtotalWithDiscount ?? product.price;
+    return price * product.quantity;
+}
+
+export const calculateTotal = () => {
+    let total = 0;
+    applyPromotionsCart();
+    cart.forEach(product => {
+        total += calculateTotalByProduct(product);
+    })
+    return total;
+}
