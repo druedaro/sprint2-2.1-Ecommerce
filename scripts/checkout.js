@@ -17,6 +17,7 @@ form.addEventListener("submit", function (e) {
     isValid = false;
   } else {
     fName.classList.remove("is-invalid");
+    fName.classList.add("is-valid")
     errorName.textContent = "";
   }
 
@@ -30,6 +31,7 @@ form.addEventListener("submit", function (e) {
     isValid = false;
   } else {
     fLastN.classList.remove("is-invalid");
+    fLastN.classList.add("is-valid");
     errorLastN.textContent = "";
   }
 
@@ -46,6 +48,7 @@ form.addEventListener("submit", function (e) {
     isValid = false;
   } else {
     fEmail.classList.remove("is-invalid");
+    fEmail.classList.add("is-valid")
     errorEmail.textContent = "";
   }
 
@@ -59,6 +62,7 @@ form.addEventListener("submit", function (e) {
     isValid = false;
   } else {
     fAddress.classList.remove("is-invalid");
+    fAddress.classList.add("is-valid");
     errorAddress.textContent = "";
   }
 
@@ -77,6 +81,7 @@ form.addEventListener("submit", function (e) {
     isValid = false;
   } else {
     fPassword.classList.remove("is-invalid");
+    fPassword.classList.add("is-valid");
     errorPassword.textContent = "";
   }
 
@@ -90,6 +95,7 @@ form.addEventListener("submit", function (e) {
     isValid = false;
   } else {
     fPhone.classList.remove("is-invalid");
+    fPhone.classList.add("is-valid");
     errorPhone.textContent = "";
   }
 
